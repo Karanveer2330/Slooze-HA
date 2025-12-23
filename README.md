@@ -12,6 +12,7 @@ Zaika is a full-stack food delivery application that enables users to browse res
 - Dashboard with statistics
 
 Live on Render: https://fda-fron.onrender.com/
+Please read Database.md for dummy login ids for quick test.
 
 ## Setup
 
