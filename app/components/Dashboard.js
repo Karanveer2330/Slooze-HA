@@ -201,7 +201,7 @@ function Dashboard() {
       const token = localStorage.getItem('token')
       const url = editingRestaurant
         ? `${API_URL}/api/restaurants/${editingRestaurant.restaurant_id}`
-        : '${API_URL}/api/restaurants'
+        : `${API_URL}/api/restaurants`
       
       const method = editingRestaurant ? 'PUT' : 'POST'
       const res = await fetch(url, {
@@ -293,7 +293,7 @@ function Dashboard() {
       
       const url = editingFood
         ? `${API_URL}/api/food-items/${editingFood.id}`
-        : '${API_URL}/api/food-items'
+        : `${API_URL}/api/food-items`
       
       const method = editingFood ? 'PUT' : 'POST'
       const res = await fetch(url, {
