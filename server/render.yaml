@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: zaika-backend
+    env: node
+    buildCommand: npm install && npm rebuild bcrypt
+    startCommand: node index.js
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: jwtSecret
+        sync: false
+      - key: ENCRYPTION_KEY
+        sync: false
+      - key: PORT
+        value: 10000
+      - key: FRONTEND_URL
+        sync: false
+
+databases:
+  - name: zaika-db
+    plan: free
+
