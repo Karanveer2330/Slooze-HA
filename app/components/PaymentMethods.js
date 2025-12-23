@@ -96,8 +96,8 @@ function PaymentMethods() {
   }
 
   const handleDelete = async (paymentId) => {
-    if (!hasRole('admin') && !hasRole('manager')) {
-      toast.error('Only administrators and managers can delete payment methods')
+    if (!hasRole('admin')) {
+      toast.error('Only administrators can delete payment methods')
       return
     }
 
@@ -218,13 +218,13 @@ function PaymentMethods() {
         </div>
       )}
 
-      {(hasRole('admin') || hasRole('manager')) && paymentMethods.length > 0 && (
+      {hasRole('admin') && paymentMethods.length > 0 && (
         <div className="alert alert-info mb-3">
           <strong>Note:</strong> You can view and manage all payment methods. Card numbers are encrypted and only last 4 digits are shown.
         </div>
       )}
 
-      {!hasRole('admin') && !hasRole('manager') && paymentMethods.length > 0 && (
+      {!hasRole('admin') && paymentMethods.length > 0 && (
         <div className="alert alert-info mb-3">
           <strong>Note:</strong> Only administrators and managers can update or delete payment methods. You can add new payment methods.
         </div>
