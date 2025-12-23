@@ -1,6 +1,7 @@
 # Zaika - Food Delivery App
 
 Full-stack food ordering application with role-based access control.
+Live on Render: https://fda-fron.onrender.com/
 
 ## Setup
 
